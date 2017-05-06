@@ -54,13 +54,23 @@ public class Questions {
 
     private static String getKeyword(){
         System.out.println("Please type your keyword");
+        String key;
         Scanner sc = new Scanner(System.in);
-        return keyword = sc.nextLine();
+        do {
+            key = sc.nextLine();
+        } while (key.isEmpty());
+        return key;
+
+        //Could also implement directly into the members
     }
 
     private static String getURL(){
         System.out.println("Please type your URL");
+        String urlAddress;
         Scanner sc = new Scanner(System.in);
-        return keyword = sc.nextLine();
+        do {
+            urlAddress = sc.nextLine();
+        } while (urlAddress.isEmpty());
+        return urlAddress;
     }
 }
